@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665f1ddb668e6814c82f2a3bfde9ad45, type: 3}
+  m_Name: 1-2
+  m_EditorClassIdentifier: 
+  storyText: 'I throw my arms behind me and grab my buttcheeks.
+
+    "Thank god they
+    are still intact."
+
+    With a sigh of relief, I notice something weird about
+    the buttcheeks.
+
+    I pat around the cheeks.
+
+    I don''t have a buttcrack.
+
+    I
+    don''t have an asshole.
+
+    These aren''t buttcheeks. This is one whole buttcheek.'
+  stateArray: []
