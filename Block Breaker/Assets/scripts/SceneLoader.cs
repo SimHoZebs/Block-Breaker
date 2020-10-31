@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private int lostSceneIndex;
+    [SerializeField] private string lostSceneName;
     public void LoadNextScene(){
         int current_scene_index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(current_scene_index + 1);
@@ -15,6 +15,6 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadLostScene(){
-        SceneManager.LoadScene(lostSceneIndex);
+        SceneManager.LoadScene(lostSceneName);
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1520695473642646360}
   - component: {fileID: 1520695473642646361}
   m_Layer: 0
-  m_Name: SceneLoader 1
+  m_Name: SceneLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055bad4d31dbfc74a86061d857274580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lostSceneName: 

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GlassPane : MonoBehaviour
 {
-    GlassCounter glassCounter;
+    GlassPaneCounter glassPaneCounter;
     private void Start() {
-        glassCounter = FindObjectOfType<GlassCounter>();
+        glassPaneCounter = FindObjectOfType<GlassPaneCounter>();
     }
     private void OnCollisionEnter2D(Collision2D other) {
-        glassCounter.reduceGlassPaneCount();
+        glassPaneCounter.reduceGlassPaneCount();
         Destroy(gameObject);
     }
 }
