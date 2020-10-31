@@ -15,6 +15,7 @@ public class GlassPaneCounter : MonoBehaviour
     }
 
     public void reduceGlassPaneCount(){
+
         glassPaneCount --;
         if(glassPaneCount == glassPaneCountToWin){
             sceneLoader.LoadNextScene();

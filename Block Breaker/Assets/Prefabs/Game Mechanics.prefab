@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glassPaneCount: 0
-  glassPaneCountToWin: 130
+  glassPaneCountToWin: 0
 --- !u!114 &5135014272640646067
 MonoBehaviour:
   m_ObjectHideFlags: 0
