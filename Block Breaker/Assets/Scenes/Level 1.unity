@@ -7674,23 +7674,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248a6e9455164e647ab9084f27fffd2a, type: 3}
---- !u!1 &1649429395 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 207679452794452415, guid: cbb1b507728114d4b95cba8777f3eb1c, type: 3}
-  m_PrefabInstance: {fileID: 207679453395662332}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1649429396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649429395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8416ca9946ad1f4584986bbf86187a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1660400794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1664352218136852953, guid: 248a6e9455164e647ab9084f27fffd2a, type: 3}
@@ -10434,6 +10417,10 @@ PrefabInstance:
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135014272640646078, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
+      propertyPath: glassPaneCountToWin
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646079, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_Name

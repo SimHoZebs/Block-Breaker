@@ -9,10 +9,7 @@ public class DontDestroyOnLoadProperties : MonoBehaviour
     private string objectTag;
     void Start()
     {
-        objectTag = gameObject.tag; 
-        if (objectTag == "keepOnlyOne"){
-            KeepOnlyOne();
-        }
+        KeepOnlyOne();
     }
 
     private void KeepOnlyOne(){
@@ -28,7 +25,7 @@ public class DontDestroyOnLoadProperties : MonoBehaviour
         GameObject prevObj = objList[0];
 
         foreach (GameObject obj in objList){
-            if (obj != objList[0] && obj == prevObj){
+            if (obj != objList[0] && obj.name == prevObj.name){
                 GameObject.Destroy(obj);
             }
             else{
