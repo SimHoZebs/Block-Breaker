@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreSystem : MonoBehaviour
 {
-    [SerializeField] private int currentScore = 0;
     [SerializeField] private int pointsPerBlockDestroyed = 10;
     [SerializeField] private Text textField;
     [SerializeField] private string currentScoreDisplayText = "SCORE: ";
+    [SerializeField] private int startingScore = 0;
+    private static int currentScore = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentScore = startingScore;
     }
 
     // Update is called once per frame
