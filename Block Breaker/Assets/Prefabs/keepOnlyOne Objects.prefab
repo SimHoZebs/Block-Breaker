@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6527477192361102294}
   - component: {fileID: 6527477192361102120}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: keepOnlyOne Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6527477192361102293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.991864, y: 13.271351, z: -1.9340458}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6527477193689218881}
@@ -58,27 +58,27 @@ PrefabInstance:
       objectReference: {fileID: 6527477193506117861}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.008136
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2713509
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9340458
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135014272640646064, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_LocalRotation.w
@@ -107,6 +107,10 @@ PrefabInstance:
     - target: {fileID: 5135014272640646079, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
       propertyPath: m_Name
       value: Game Mechanics
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135014272640646079, guid: 136c655e065caff4ebf9c93012501d11, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2251888774937633949, guid: 136c655e065caff4ebf9c93012501d11, type: 3}

@@ -9,7 +9,7 @@ public class GlassPaneCounter : MonoBehaviour
     private SceneLoader sceneLoader;
     void Start()
     {
-        glassPaneCount = FindObjectsOfType<GlassPane>().Length;
+        CountGlassPanes();
         sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
@@ -19,5 +19,9 @@ public class GlassPaneCounter : MonoBehaviour
         if(glassPaneCount <= glassPaneCountToWin){
             sceneLoader.LoadNextScene();
         }
+    }
+    
+    public void CountGlassPanes(){
+        glassPaneCount = FindObjectsOfType<GlassPane>().Length;
     }
 }

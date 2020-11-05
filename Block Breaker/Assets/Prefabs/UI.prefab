@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 207679452794452408}
   m_Layer: 5
   m_Name: UI
-  m_TagString: keepOnlyOne
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &207679452794452409
 MonoBehaviour:
