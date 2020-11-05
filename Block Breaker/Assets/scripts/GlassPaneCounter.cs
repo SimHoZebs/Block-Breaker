@@ -6,7 +6,6 @@ public class GlassPaneCounter : MonoBehaviour
 {
     [SerializeField] private int glassPaneCount; 
     [SerializeField] private int glassPaneCountToWin;
-
     private SceneLoader sceneLoader;
     void Start()
     {
@@ -17,7 +16,7 @@ public class GlassPaneCounter : MonoBehaviour
     public void reduceGlassPaneCount(){
 
         glassPaneCount --;
-        if(glassPaneCount == glassPaneCountToWin){
+        if(glassPaneCount <= glassPaneCountToWin){
             sceneLoader.LoadNextScene();
         }
     }
