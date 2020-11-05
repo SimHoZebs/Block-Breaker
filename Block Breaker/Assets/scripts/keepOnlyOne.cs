@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class keepOnlyOne : MonoBehaviour
 {
-    void Awake()
+    void Start()
     {
         //fuck
         var objCount = FindObjectsOfType<keepOnlyOne>().Length;
 
         if (objCount > 1){
-            gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else{
