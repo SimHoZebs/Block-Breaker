@@ -16,7 +16,7 @@ public class GlassPane : MonoBehaviour
     }
 
     private void DestroyBlock(){
-        GameObject particles = Instantiate(particleVFX);
+        GameObject particles = Instantiate(particleVFX, transform.position, transform.rotation);
         glassPaneCounter.reduceGlassPaneCount();
         scoreSystem.AddBlockDestroyedPoints();
         Destroy(gameObject);
