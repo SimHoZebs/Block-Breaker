@@ -10,20 +10,23 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] private Text textField;
     [SerializeField] private string currentScoreDisplayText = "SCORE: ";
     [SerializeField] private int startingScore = 0;
-    private static int currentScore = 0;
+    private int currentScore = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        currentScore = startingScore;
+        RestartGame();
     }
-
     // Update is called once per frame
-    public void AddBlockDestroyedPoints(){
-        currentScore += pointsPerBlockDestroyed;
-    }
     void Update()
     {
         textField.text = currentScoreDisplayText + currentScore.ToString();
+    }
+    public void AddBlockDestroyedPoints(){
+        currentScore += pointsPerBlockDestroyed;
+    }
+
+    public void RestartGame(){
+        currentScore = startingScore;
     }
 }

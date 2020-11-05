@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(current_scene_index + 1);
     }
     public void RestartGame(){
+        FindObjectOfType<ScoreSystem>().RestartGame();
         SceneManager.LoadScene(0);
     }
 
