@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class GlassPane : MonoBehaviour
 {
-    GlassPaneCounter glassPaneCounter;
-    ScoreSystem scoreSystem;
+    [SerializeField] private GlassPaneCounter glassPaneCounter;
+    [SerializeField] private ScoreSystem scoreSystem;
     [SerializeField] private GameObject particleVFX;
+    [SerializeField] private float particlesLifeTime;
+    private GameObject particles;
+
     private void Start() {
         glassPaneCounter = FindObjectOfType<GlassPaneCounter>();
         scoreSystem = FindObjectOfType<ScoreSystem>();
     }
+
     private void OnCollisionEnter2D(Collision2D other) {
         DestroyBlock();
     }
 
     private void DestroyBlock(){
-        GameObject particles = Instantiate(particleVFX, transform.position, transform.rotation);
+        particles = Instantiate(particleVFX, transform.position, transform.rotation);
+        Destroy(particles, 0.2f);
+
         glassPaneCounter.reduceGlassPaneCount();
         scoreSystem.AddBlockDestroyedPoints();
         Destroy(gameObject);
