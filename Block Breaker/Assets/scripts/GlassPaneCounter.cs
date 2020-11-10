@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GlassPaneCounter : MonoBehaviour
 {
-    [SerializeField] private int glassPaneCount; 
+    [SerializeField] private int glassPaneCount = 0; 
     [SerializeField] private int glassPaneCountToWin;
     private SceneLoader sceneLoader;
     void Start()
@@ -22,6 +22,13 @@ public class GlassPaneCounter : MonoBehaviour
     }
     
     public void CountGlassPanes(){
-        glassPaneCount = FindObjectsOfType<GlassPane>().Length;
+        var glassPaneArray = FindObjectsOfType<GlassPane>();
+
+        foreach (GlassPane glassPane in glassPaneArray){
+            if(glassPane.name.Contains("glass pane")){
+                glassPaneCount ++;
+            }
+        }
+
     }
 }
