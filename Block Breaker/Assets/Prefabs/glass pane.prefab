@@ -123,3 +123,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  glassPaneBreakSound:
+  - {fileID: 8300000, guid: 02a914212a0bde8479f45c46342be465, type: 3}
+  - {fileID: 8300000, guid: fd925e4c1b6fa7742a6caa393895c0b5, type: 3}
+  - {fileID: 8300000, guid: 0cf798839177e9146bd139d2babebbb0, type: 3}
+  audioSource: {fileID: 2492301420604277768, guid: c51b4d70aa76a84458148bed18a99394, type: 3}
+  glassPaneTypes:
+  - colorHex: FFFFFF
+    health: 1
+  - colorHex: E03838
+    health: 2
+  - colorHex: FFD600
+    health: 3
+  - colorHex: 0FFF00
+    health: 4
+  - colorHex: B70FF
+    health: 0

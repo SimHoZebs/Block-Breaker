@@ -9,6 +9,8 @@ public class Paddle: MonoBehaviour
     private float xMinLimit;
     private float xMaxLimit;
     private Vector2 paddlePos;
+    [SerializeField] private GameObject audioSource;
+    [SerializeField] private AudioClip[] paddleHitSound;
 
     void Start()
     {
@@ -27,5 +29,12 @@ public class Paddle: MonoBehaviour
         else{
 
         }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D other) {
+            var chosenSound = paddleHitSound[Random.Range(0, paddleHitSound.Length)];
+            var audioSourcePosition = audioSource.transform.localPosition;
+
+            AudioSource.PlayClipAtPoint(chosenSound, audioSourcePosition);
     }
 }

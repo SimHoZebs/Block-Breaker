@@ -904,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394703638087453413, guid: d93fb83ac72df0a4f806ffeecd7f0883, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2394703638087453413, guid: d93fb83ac72df0a4f806ffeecd7f0883, type: 3}
       propertyPath: m_LocalPosition.y
@@ -950,7 +950,8 @@ PrefabInstance:
       propertyPath: paddle1
       value: 
       objectReference: {fileID: 272143879}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 574778139821374680, guid: d93fb83ac72df0a4f806ffeecd7f0883, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d93fb83ac72df0a4f806ffeecd7f0883, type: 3}
 --- !u!4 &120936482 stripped
 Transform:
@@ -1230,6 +1231,10 @@ PrefabInstance:
     - target: {fileID: 1664352218136852953, guid: 248a6e9455164e647ab9084f27fffd2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629776957331683185, guid: 248a6e9455164e647ab9084f27fffd2a, type: 3}
+      propertyPath: audioSource
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5629776957331683185, guid: 248a6e9455164e647ab9084f27fffd2a, type: 3}
       propertyPath: unbreakableColorHex
@@ -6467,7 +6472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1823279984483896602, guid: f4d664ee1f82669408fd01eb9fcabab1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1823279984483896602, guid: f4d664ee1f82669408fd01eb9fcabab1, type: 3}
       propertyPath: m_LocalPosition.y

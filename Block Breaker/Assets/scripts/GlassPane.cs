@@ -4,32 +4,57 @@ using UnityEngine;
 
 public class GlassPane : MonoBehaviour
 {
+    //particle system
     [SerializeField] private GameObject particleVFX;
-    [SerializeField] private string unbreakableColorHex = "B700FF";
+    private float particleLifeTime = 0f;
+
+    //Break sound
+    [SerializeField] private GameObject audioSource;
+    [SerializeField] private AudioClip[] glassPaneBreakSound;
+
+    //glass pane color differentiation
+    [Tooltip("0 health is considered unbreakable.")]
+    [SerializeField] private GlassPaneTypes[] glassPaneTypes = new GlassPaneTypes[6];
+    private GlassPaneTypes glassPaneFields;
+    [System.Serializable] private struct GlassPaneTypes{
+        public string colorHex;
+        public int health;
+        private bool breakReady;
+        }
+
+    //Initialzing objects for functions in other classes
     private GlassPaneCounter glassPaneCounter;
     private ScoreSystem scoreSystem;
-    private float particleLifeTime = 0f;
-    private string glassPaneColorHex;
 
     private void Start() {
         glassPaneCounter = FindObjectOfType<GlassPaneCounter>();
         scoreSystem = FindObjectOfType<ScoreSystem>();
 
         particleLifeTime = particleVFX.GetComponent<ParticleSystem>().main.duration;
-        glassPaneColorHex = ColorUtility.ToHtmlStringRGB(gameObject.GetComponent<SpriteRenderer>().color);
+        glassPaneFields.colorHex = ColorUtility.ToHtmlStringRGB(gameObject.GetComponent<SpriteRenderer>().color);
 
-        if (glassPaneColorHex == unbreakableColorHex){
-            gameObject.name = "Unbreakable";
+        InitializeGlassPaneFields();
+    }
+
+    private void InitializeGlassPaneFields(){
+        foreach (GlassPaneTypes glassPaneType in glassPaneTypes){
+            if (glassPaneFields.colorHex == glassPaneType.colorHex){
+                glassPaneFields.health = glassPaneType.health;
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (gameObject.name != "Unbreakable"){
+        if (glassPaneFields.health == 1){
             DestroyBlock();
+        }
+        else if (glassPaneFields.health > 0){
+            glassPaneFields.health--;
         }
     }
 
     private void DestroyBlock(){
+        PlayBreakSFX();
         PlayParticleVFX();
         glassPaneCounter.reduceGlassPaneCount();
         scoreSystem.AddBlockDestroyedPoints();
@@ -39,5 +64,15 @@ public class GlassPane : MonoBehaviour
     private void PlayParticleVFX(){
         var particles = Instantiate(particleVFX, transform.position, transform.rotation);
         Destroy(particles, particleLifeTime);
+    }
+
+    private void PlayBreakSFX(){
+        var chosenSound = glassPaneBreakSound[Random.Range(0, glassPaneBreakSound.Length)];
+        var audioSourceLocation = audioSource.transform.localPosition;
+        AudioSource.PlayClipAtPoint(chosenSound, audioSourceLocation);
+
+        //This doesn't work because why??
+        //var test = audioSource.GetComponent<AudioSource>();
+        //test.PlayOneShot(chosenSound);
     }
 }

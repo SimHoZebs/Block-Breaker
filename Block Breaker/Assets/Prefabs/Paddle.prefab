@@ -146,3 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenWidthInUnits: 32
   canMove: 1
+  audioSource: {fileID: 2492301420604277768, guid: c51b4d70aa76a84458148bed18a99394, type: 3}
+  paddleHitSound:
+  - {fileID: 8300000, guid: 26db41fde91064e4586dbffaf9b2deec, type: 3}
+  - {fileID: 8300000, guid: ea698b8981bce2547a4fa5b7f3fccb44, type: 3}
+  - {fileID: 8300000, guid: 5b738e20052f1a0499a658f6da6aa547, type: 3}
+  - {fileID: 8300000, guid: c3590882331bb5140949268085e7613e, type: 3}
