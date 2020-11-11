@@ -10,7 +10,8 @@ public class GlassPane : MonoBehaviour
 
     //Break sound
     [SerializeField] private GameObject audioSource;
-    [SerializeField] private AudioClip[] glassPaneBreakSound;
+    [SerializeField] private AudioClip[] glassPaneHitSounds;
+    [SerializeField] private AudioClip[] glassPaneBreakSounds;
 
     //glass pane color differentiation
     [Tooltip("0 health is considered unbreakable.")]
@@ -19,7 +20,6 @@ public class GlassPane : MonoBehaviour
     [System.Serializable] private struct GlassPaneTypes{
         public string colorHex;
         public int health;
-        private bool breakReady;
         }
 
     //Initialzing objects for functions in other classes
@@ -45,6 +45,7 @@ public class GlassPane : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        AudioSystem.PlayRandomSFX(glassPaneHitSounds, audioSource);
         if (glassPaneFields.health == 1){
             DestroyBlock();
         }
@@ -54,7 +55,7 @@ public class GlassPane : MonoBehaviour
     }
 
     private void DestroyBlock(){
-        PlayBreakSFX();
+        AudioSystem.PlayRandomSFX(glassPaneBreakSounds, audioSource);
         PlayParticleVFX();
         glassPaneCounter.reduceGlassPaneCount();
         scoreSystem.AddBlockDestroyedPoints();
@@ -66,13 +67,4 @@ public class GlassPane : MonoBehaviour
         Destroy(particles, particleLifeTime);
     }
 
-    private void PlayBreakSFX(){
-        var chosenSound = glassPaneBreakSound[Random.Range(0, glassPaneBreakSound.Length)];
-        var audioSourceLocation = audioSource.transform.localPosition;
-        AudioSource.PlayClipAtPoint(chosenSound, audioSourceLocation);
-
-        //This doesn't work because why??
-        //var test = audioSource.GetComponent<AudioSource>();
-        //test.PlayOneShot(chosenSound);
-    }
 }

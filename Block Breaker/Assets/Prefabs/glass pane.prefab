@@ -123,11 +123,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
-  glassPaneBreakSound:
+  audioSource: {fileID: 2492301420604277768, guid: c51b4d70aa76a84458148bed18a99394, type: 3}
+  glassPaneHitSounds:
+  - {fileID: 8300000, guid: 2b2db3b96e899ca41b38071f35bf7579, type: 3}
+  - {fileID: 8300000, guid: d71043c3541c09047b14dfd57566de3f, type: 3}
+  - {fileID: 8300000, guid: 541cb1b79af5e9e47a5a7a55df8b258c, type: 3}
+  - {fileID: 8300000, guid: 3d18c98d7c1a42d459325a2ef43cc0b6, type: 3}
+  - {fileID: 8300000, guid: d4f2a5711b1856f4290214a8249ccd24, type: 3}
+  - {fileID: 8300000, guid: 795dcba30a73acf4994766fe15f444c9, type: 3}
+  glassPaneBreakSounds:
   - {fileID: 8300000, guid: 02a914212a0bde8479f45c46342be465, type: 3}
   - {fileID: 8300000, guid: fd925e4c1b6fa7742a6caa393895c0b5, type: 3}
   - {fileID: 8300000, guid: 0cf798839177e9146bd139d2babebbb0, type: 3}
-  audioSource: {fileID: 2492301420604277768, guid: c51b4d70aa76a84458148bed18a99394, type: 3}
   glassPaneTypes:
   - colorHex: FFFFFF
     health: 1

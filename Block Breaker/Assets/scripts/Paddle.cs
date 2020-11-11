@@ -32,9 +32,6 @@ public class Paddle: MonoBehaviour
     }
     
     private void OnCollisionEnter2D(Collision2D other) {
-            var chosenSound = paddleHitSound[Random.Range(0, paddleHitSound.Length)];
-            var audioSourcePosition = audioSource.transform.localPosition;
-
-            AudioSource.PlayClipAtPoint(chosenSound, audioSourcePosition);
+            AudioSystem.PlayRandomSFX(paddleHitSound, audioSource);
     }
 }
