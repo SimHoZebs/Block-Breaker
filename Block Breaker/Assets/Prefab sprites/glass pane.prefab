@@ -123,6 +123,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  crackSprites:
+  - {fileID: 7541619521587752631, guid: dec65d1281a4683468d43bd9237f38d6, type: 3}
+  - {fileID: 4074858418717156504, guid: f05486fc425190a4b8590b46f921289c, type: 3}
+  - {fileID: 4360582402488657813, guid: 2f5b11b482a3c02458e7dbcb73a35de2, type: 3}
+  - {fileID: 9133173735226103916, guid: 26ac28fdf3614254495168bd2a458139, type: 3}
+  - {fileID: 317014826220760693, guid: c584d753ebe97334eae8e2e72df8ccd5, type: 3}
+  - {fileID: 3448747917416603483, guid: 579c659751fcd664994ade7585398d3d, type: 3}
+  - {fileID: 8755175631592951756, guid: 0636aec80a1093d449407575063a45ca, type: 3}
+  - {fileID: 378985448630302190, guid: 9b83a6358f244e845a876de8dc4351ec, type: 3}
+  - {fileID: 215808144531737550, guid: 3036f18ec9015574db884bfc51ec66d0, type: 3}
+  - {fileID: 5816556841290863945, guid: d3096d343bcb1c642b01edee47a36e63, type: 3}
   audioSource: {fileID: 2492301420604277768, guid: c51b4d70aa76a84458148bed18a99394, type: 3}
   glassPaneHitSounds:
   - {fileID: 8300000, guid: 2b2db3b96e899ca41b38071f35bf7579, type: 3}
@@ -137,12 +148,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0cf798839177e9146bd139d2babebbb0, type: 3}
   glassPaneTypes:
   - colorHex: FFFFFF
-    health: 1
+    totalHealth: 1
+    currHealth: 0
   - colorHex: E03838
-    health: 2
+    totalHealth: 2
+    currHealth: 0
   - colorHex: FFD600
-    health: 3
+    totalHealth: 3
+    currHealth: 0
   - colorHex: 0FFF00
-    health: 4
+    totalHealth: 4
+    currHealth: 0
   - colorHex: B70FF
-    health: 0
+    totalHealth: 0
+    currHealth: 0
